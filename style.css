@@ -1,0 +1,262 @@
+/* ====================================
+   FOSS Aurora Quest Stylesheet
+   ==================================== */
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+  color: #e0f7fa;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ISSUE #8: Add .hidden class to hide sections initially */
+/* TODO: Add this rule: .hidden { display: none; } */
+
+/* ISSUE #8: Add fade-in animation */
+/* TODO: Create @keyframes fadeIn with opacity transition */
+/* TODO: Create .fade-in class that uses the animation */
+
+#smooth-wrapper {
+  overflow: hidden;
+}
+
+#smooth-content {
+  overflow: visible;
+  width: 100%;
+}
+
+/* ============ Card System ============ */
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 32px;
+  margin: 24px auto;
+  max-width: 900px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 48px rgba(0, 188, 212, 0.3);
+}
+
+/* ============ Header & Navigation ============ */
+header {
+  text-align: center;
+  margin-top: 40px;
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+  background: linear-gradient(45deg, #00bcd4, #80deea, #b2ebf2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #80deea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00bcd4;
+}
+
+/* ============ Material Buttons ============ */
+.material-button {
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+  transition: all 0.3s ease;
+  margin: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.material-button:hover {
+  background: linear-gradient(135deg, #0097a7, #00838f);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.6);
+}
+
+.material-button:active {
+  transform: translateY(0);
+}
+
+/* ============ Feature List ============ */
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  margin: 20px 0;
+  font-size: 1.15em;
+  padding-left: 8px;
+  border-left: 3px solid #00bcd4;
+}
+
+/* ============ Command Grid ============ */
+.command-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.command-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s;
+  border: 1px solid rgba(0, 188, 212, 0.3);
+}
+
+.command-card:hover {
+  background: rgba(0, 188, 212, 0.2);
+  transform: scale(1.05);
+}
+
+.command-card strong {
+  color: #00bcd4;
+  font-size: 1.1em;
+}
+
+.command-card span {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+/* ============ Contributors Grid ============ */
+.contributors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.contributor-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.contributor-card:hover {
+  transform: translateY(-8px);
+}
+
+.contributor-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  border: 3px solid #00bcd4;
+}
+
+.contributor-card p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ============ Images ============ */
+.foss-icon {
+  width: 180px;
+  margin: 24px auto;
+  display: block;
+  filter: drop-shadow(0 0 20px rgba(0, 188, 212, 0.5));
+}
+
+.collab-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* ============ Contact Form ============ */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin-top: 16px;
+  font-weight: 500;
+  color: #80deea;
+}
+
+form input {
+  width: 100%;
+  padding: 14px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+form input:focus {
+  outline: 2px solid #00bcd4;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ============ Footer ============ */
+footer {
+  text-align: center;
+  margin: 40px auto 20px;
+  opacity: 0.8;
+}
+
+/* ============ Responsive Design ============ */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .card {
+    padding: 20px;
+    margin: 16px;
+  }
+
+  nav ul {
+    gap: 16px;
+  }
+}

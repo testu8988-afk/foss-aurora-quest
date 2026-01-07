@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FOSS Aurora Quest</title>
+    <!-- ISSUE #1: Add Google Fonts link for Roboto (400, 500, 700 weights) -->
+    <!-- Hint: Visit https://fonts.google.com and get the Roboto family link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <header class="card">
+          <h1>🌌 FOSS Aurora Quest</h1>
+          <p>Join the open source journey under the aurora lights!</p>
+          <nav>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#why-foss">Why FOSS?</a></li>
+              <li><a href="#git-commands">Git Commands</a></li>
+              <li><a href="#contribute">Contribute</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <section id="hero" class="card">
+          <h2>✨ Illuminate the Code Aurora</h2>
+          <p>Fix issues to reveal hidden FOSS wisdom and light up the sky!</p>
+          <!-- ISSUE #2: Add onclick="toggleSection('why-foss')" to this button -->
+          <button id="launch-btn" class="material-button">Start Quest</button>
+          <!-- ISSUE #3: Replace src with a real Tux/Linux penguin image URL -->
+          <!-- Also add proper alt text describing Tux -->
+          <img src="https://via.placeholder.com/200" alt="" class="foss-icon" />
+        </section>
+
+        <section id="why-foss" class="card hidden">
+          <h2>💡 Why Free & Open Source Software?</h2>
+          <ul class="feature-list">
+            <li>🔓 Freedom to use, study, share, and improve.</li>
+            <li>🤝 Community collaboration powers innovation.</li>
+            <li>🔗 No vendor lock-in – code belongs to everyone.</li>
+            <!-- ISSUE #4: Add one more <li> about transparency/security -->
+            <!-- Hint: "Many eyes make all bugs shallow" - Linus's Law -->
+          </ul>
+          <!-- ISSUE #5: Replace with real collaboration illustration and add alt text -->
+          <img
+            src="https://via.placeholder.com/600x300"
+            alt=""
+            class="collab-img"
+          />
+          <!-- ISSUE #6: Add onclick="toggleSection('git-commands')" -->
+          <button class="material-button">Reveal Git Commands</button>
+        </section>
+
+        <section id="git-commands" class="card hidden">
+          <h2>⚡ Essential Git Commands</h2>
+          <div class="command-grid">
+            <div class="command-card">
+              <strong>git init</strong><br />
+              <span>Create a new repo</span>
+            </div>
+            <div class="command-card">
+              <strong>git clone</strong><br />
+              <span>Copy a repo</span>
+            </div>
+            <div class="command-card">
+              <strong>git add .</strong><br />
+              <span>Stage changes</span>
+            </div>
+            <div class="command-card">
+              <strong>git commit -m "msg"</strong><br />
+              <span>Save snapshot</span>
+            </div>
+            <!-- ISSUE #7: Add two more command cards -->
+            <!-- Suggestion: git branch and git pull -->
+          </div>
+        </section>
+
+        <section id="contribute" class="card">
+          <h2>🌟 Our Contributors</h2>
+          <div class="contributors-grid">
+            <!-- ISSUE #10: Add 3-4 complete contributor cards -->
+            <!-- Use https://placehold.co/100x100/COLOR/white?text=C1 for images -->
+            <!-- Example structure provided below (incomplete): -->
+            <div class="contributor-card">
+              <img src="" alt="" />
+              <p>Your Name Here!</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="card">
+          <h2>📬 Contact the FOSS Club</h2>
+          <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Your name" />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="your@email.com" />
+
+            <button
+              type="button"
+              class="material-button"
+              onclick="submitForm()"
+            >
+              Submit
+            </button>
+          </form>
+        </section>
+
+        <footer class="card">
+          <!-- ISSUE #11: Update year from 2025 to 2026 -->
+          <p>&copy; 2025 FOSS Club • Powered by Open Source ❤️</p>
+        </footer>
+      </div>
+    </div>
+
+    <!-- GSAP for smooth scrolling (not part of challenges) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollSmoother.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
