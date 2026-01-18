@@ -41,7 +41,7 @@ function toggleSection(sectionId) {
  */
 function animateLaunch() {
     // ISSUE #9: Fix the syntax error below (missing opening parenthesis)
-    console.log 'Aurora glowing! ✨');
+  (console.log 'Aurora glowing! ✨');
 
     // Bonus: Could add particle effects here later!
 }
